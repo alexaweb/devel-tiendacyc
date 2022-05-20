@@ -4,8 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 import io
 import pandas as pd
-import pymysql
-import mysql.connector
+#import pymysql
+#import mysql.connector
 from sqlalchemy import create_engine
 import re
 
