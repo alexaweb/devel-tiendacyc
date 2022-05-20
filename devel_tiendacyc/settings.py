@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-*srp^n7yxmk#!40vg_^n&1wol9a29h#$+mhaa$zo8et6p2(3%a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.21.119.51','alexaweb.pythonanywhere.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+	'members',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'devel_tiendacyc.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'devel-tiendacyc', # database name
+        'USER': 'cobs',
+        'PASSWORD': 'cobs.pwd',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -105,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 
